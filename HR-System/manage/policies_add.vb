@@ -67,13 +67,13 @@ Public Class policies_add
             Else
                 con.Close()
                 con.Open()
-                Dim cmd As New MySqlCommand("SELECT memo FROM `hr_memo_policies` WHERE memo = '" & txt_policy.Text & "' and class = '" & num_class.Value & "' ", con)
+                Dim cmd As New MySqlCommand("SELECT policy FROM `hr_memo_policies` WHERE policy = '" & txt_policy.Text & "' and class = '" & num_class.Value & "' ", con)
                 dr = cmd.ExecuteReader
                 If dr.Read = False Then
                     con.Close()
                     con.Open()
 
-                    Dim cmdinsert As New MySqlCommand(" INSERT INTO `hr_memo_policies` (`memo`, `class`) VALUES ('" & txt_policy.Text & "','" & num_class.Value & "')", con)
+                    Dim cmdinsert As New MySqlCommand(" INSERT INTO `hr_memo_policies` (`policy`, `class`) VALUES ('" & txt_policy.Text & "','" & num_class.Value & "')", con)
                     cmdinsert.ExecuteNonQuery()
                     MessageBox.Show("Policy Added successfully!")
                     con.Close()

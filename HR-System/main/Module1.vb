@@ -25,6 +25,10 @@ Module Module1
     Public datedb As String = Date.Now.ToString("yyyy-MM-dd")
     Public shift1 As String
 
+    Public violation_idno As String
+    Public violation_id As Integer
+    Public violation_class As Integer
+
     Function GetMacAddress() As String
         Dim macAddress As String = ""
 
@@ -85,6 +89,21 @@ Module Module1
             con.Close()
             da.Dispose()
 
+        End Try
+    End Sub
+
+    Public Sub cmb_display(sql As String, column As String, cmb As Guna.UI2.WinForms.Guna2ComboBox)
+        Try
+            con.Close()
+            con.Open()
+            Dim cmdselect As New MySqlCommand(sql, con)
+            dr = cmdselect.ExecuteReader
+            cmb.Items.Clear()
+            While (dr.Read())
+                cmb.Items.Add(dr.GetString(column))
+            End While
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
 End Module

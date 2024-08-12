@@ -57,4 +57,8 @@ Public Class sub_FRAME
     Private Sub CreateReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateReportToolStripMenuItem.Click
         display_formsub(memo_create)
     End Sub
+
+    Private Sub ViewRecordsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewRecordsToolStripMenuItem.Click
+        display_formsub(memo_view)
+    End Sub
 End Class

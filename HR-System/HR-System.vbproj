@@ -51,6 +51,10 @@
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
@@ -106,6 +110,7 @@
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -161,10 +166,48 @@
     <Compile Include="manage\policies_add.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="memo\HR_Dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HR_Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="memo\HR_Dataset.vb">
+      <DependentUpon>HR_Dataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="memo\memo_create.Designer.vb">
       <DependentUpon>memo_create.vb</DependentUpon>
     </Compile>
     <Compile Include="memo\memo_create.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memo\memo_view.Designer.vb">
+      <DependentUpon>memo_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="memo\memo_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memo\print_memo.Designer.vb">
+      <DependentUpon>print_memo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="memo\print_memo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memo\print_memo_rpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>print_memo_rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="memo\reprint_memo.Designer.vb">
+      <DependentUpon>reprint_memo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="memo\reprint_memo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memo\search_name.Designer.vb">
+      <DependentUpon>search_name.vb</DependentUpon>
+    </Compile>
+    <Compile Include="memo\search_name.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -221,6 +264,22 @@
     <EmbeddedResource Include="memo\memo_create.resx">
       <DependentUpon>memo_create.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="memo\memo_view.resx">
+      <DependentUpon>memo_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memo\print_memo.resx">
+      <DependentUpon>print_memo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memo\print_memo_rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>print_memo_rpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memo\reprint_memo.resx">
+      <DependentUpon>reprint_memo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memo\search_name.resx">
+      <DependentUpon>search_name.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -238,6 +297,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="memo\HR_Dataset.xsc">
+      <DependentUpon>HR_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="memo\HR_Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HR_Dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="memo\HR_Dataset.xss">
+      <DependentUpon>HR_Dataset.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -255,6 +325,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\errorsound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

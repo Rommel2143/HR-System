@@ -27,6 +27,7 @@ Partial Class policies_add
         Me.num_class = New Guna.UI2.WinForms.Guna2NumericUpDown()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox2 = New Guna.UI2.WinForms.Guna2GroupBox()
@@ -37,10 +38,18 @@ Partial Class policies_add
         Me.Label3 = New System.Windows.Forms.Label()
         Me.idno = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2GroupBox3 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.Guna2Separator3 = New Guna.UI2.WinForms.Guna2Separator()
+        Me.Guna2ImageButton2 = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
         CType(Me.num_class, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.Guna2GroupBox2.SuspendLayout()
+        Me.Guna2GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'txt_policy
@@ -104,6 +113,22 @@ Partial Class policies_add
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(591, 323)
         Me.Guna2GroupBox1.TabIndex = 1
         Me.Guna2GroupBox1.Text = "Add Policy"
+        '
+        'Guna2Button3
+        '
+        Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button3.FillColor = System.Drawing.SystemColors.HotTrack
+        Me.Guna2Button3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button3.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button3.Image = CType(resources.GetObject("Guna2Button3.Image"), System.Drawing.Image)
+        Me.Guna2Button3.ImageSize = New System.Drawing.Size(25, 25)
+        Me.Guna2Button3.Location = New System.Drawing.Point(552, -2)
+        Me.Guna2Button3.Name = "Guna2Button3"
+        Me.Guna2Button3.Size = New System.Drawing.Size(39, 41)
+        Me.Guna2Button3.TabIndex = 5
         '
         'Guna2Separator1
         '
@@ -271,27 +296,145 @@ Partial Class policies_add
         Me.Guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.Guna2Button2.UseTransparentBackground = True
         '
-        'Guna2Button3
+        'Guna2GroupBox3
         '
-        Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button3.FillColor = System.Drawing.SystemColors.HotTrack
-        Me.Guna2Button3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button3.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button3.Image = CType(resources.GetObject("Guna2Button3.Image"), System.Drawing.Image)
-        Me.Guna2Button3.ImageSize = New System.Drawing.Size(25, 25)
-        Me.Guna2Button3.Location = New System.Drawing.Point(552, -2)
-        Me.Guna2Button3.Name = "Guna2Button3"
-        Me.Guna2Button3.Size = New System.Drawing.Size(39, 41)
-        Me.Guna2Button3.TabIndex = 5
+        Me.Guna2GroupBox3.Controls.Add(Me.Guna2Separator3)
+        Me.Guna2GroupBox3.Controls.Add(Me.Guna2ImageButton2)
+        Me.Guna2GroupBox3.Controls.Add(Me.Label4)
+        Me.Guna2GroupBox3.Controls.Add(Me.Guna2TextBox1)
+        Me.Guna2GroupBox3.Controls.Add(Me.Label5)
+        Me.Guna2GroupBox3.Controls.Add(Me.Guna2TextBox2)
+        Me.Guna2GroupBox3.Controls.Add(Me.Guna2Button4)
+        Me.Guna2GroupBox3.CustomBorderColor = System.Drawing.SystemColors.HotTrack
+        Me.Guna2GroupBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2GroupBox3.ForeColor = System.Drawing.Color.White
+        Me.Guna2GroupBox3.Location = New System.Drawing.Point(665, 46)
+        Me.Guna2GroupBox3.Name = "Guna2GroupBox3"
+        Me.Guna2GroupBox3.Size = New System.Drawing.Size(591, 678)
+        Me.Guna2GroupBox3.TabIndex = 6
+        Me.Guna2GroupBox3.Text = "Add Employee"
+        '
+        'Guna2Separator3
+        '
+        Me.Guna2Separator3.BackColor = System.Drawing.Color.White
+        Me.Guna2Separator3.Location = New System.Drawing.Point(45, 219)
+        Me.Guna2Separator3.Name = "Guna2Separator3"
+        Me.Guna2Separator3.Size = New System.Drawing.Size(501, 19)
+        Me.Guna2Separator3.TabIndex = 5
+        '
+        'Guna2ImageButton2
+        '
+        Me.Guna2ImageButton2.BackColor = System.Drawing.Color.White
+        Me.Guna2ImageButton2.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.Guna2ImageButton2.HoverState.ImageSize = New System.Drawing.Size(30, 30)
+        Me.Guna2ImageButton2.Image = CType(resources.GetObject("Guna2ImageButton2.Image"), System.Drawing.Image)
+        Me.Guna2ImageButton2.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.Guna2ImageButton2.ImageRotate = 0!
+        Me.Guna2ImageButton2.ImageSize = New System.Drawing.Size(30, 30)
+        Me.Guna2ImageButton2.Location = New System.Drawing.Point(336, 139)
+        Me.Guna2ImageButton2.Name = "Guna2ImageButton2"
+        Me.Guna2ImageButton2.PressedState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
+        Me.Guna2ImageButton2.PressedState.ImageSize = New System.Drawing.Size(30, 30)
+        Me.Guna2ImageButton2.Size = New System.Drawing.Size(39, 34)
+        Me.Guna2ImageButton2.TabIndex = 15
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.White
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.DimGray
+        Me.Label4.Location = New System.Drawing.Point(90, 64)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(54, 21)
+        Me.Label4.TabIndex = 14
+        Me.Label4.Text = "ID no :"
+        '
+        'Guna2TextBox1
+        '
+        Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2TextBox1.DefaultText = ""
+        Me.Guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox1.IconLeft = CType(resources.GetObject("Guna2TextBox1.IconLeft"), System.Drawing.Image)
+        Me.Guna2TextBox1.IconLeftSize = New System.Drawing.Size(30, 30)
+        Me.Guna2TextBox1.Location = New System.Drawing.Point(150, 131)
+        Me.Guna2TextBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Guna2TextBox1.Name = "Guna2TextBox1"
+        Me.Guna2TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.Guna2TextBox1.PlaceholderText = "Password..."
+        Me.Guna2TextBox1.SelectedText = ""
+        Me.Guna2TextBox1.Size = New System.Drawing.Size(179, 50)
+        Me.Guna2TextBox1.TabIndex = 13
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.White
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.DimGray
+        Me.Label5.Location = New System.Drawing.Point(60, 131)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(83, 21)
+        Me.Label5.TabIndex = 12
+        Me.Label5.Text = "Password :"
+        '
+        'Guna2TextBox2
+        '
+        Me.Guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2TextBox2.DefaultText = ""
+        Me.Guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox2.Location = New System.Drawing.Point(150, 64)
+        Me.Guna2TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Guna2TextBox2.Name = "Guna2TextBox2"
+        Me.Guna2TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Guna2TextBox2.PlaceholderText = "Enter ID no..."
+        Me.Guna2TextBox2.SelectedText = ""
+        Me.Guna2TextBox2.Size = New System.Drawing.Size(159, 48)
+        Me.Guna2TextBox2.TabIndex = 10
+        '
+        'Guna2Button4
+        '
+        Me.Guna2Button4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Guna2Button4.Animated = True
+        Me.Guna2Button4.AnimatedGIF = True
+        Me.Guna2Button4.AutoRoundedCorners = True
+        Me.Guna2Button4.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button4.BorderRadius = 17
+        Me.Guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button4.FillColor = System.Drawing.SystemColors.HotTrack
+        Me.Guna2Button4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button4.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button4.Image = CType(resources.GetObject("Guna2Button4.Image"), System.Drawing.Image)
+        Me.Guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.Guna2Button4.Location = New System.Drawing.Point(266, 613)
+        Me.Guna2Button4.Name = "Guna2Button4"
+        Me.Guna2Button4.Size = New System.Drawing.Size(109, 36)
+        Me.Guna2Button4.TabIndex = 3
+        Me.Guna2Button4.Text = "Add User"
+        Me.Guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.Guna2Button4.UseTransparentBackground = True
         '
         'policies_add
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1286, 810)
+        Me.Controls.Add(Me.Guna2GroupBox3)
         Me.Controls.Add(Me.Guna2GroupBox2)
         Me.Controls.Add(Me.Guna2GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -303,6 +446,8 @@ Partial Class policies_add
         Me.Guna2GroupBox1.PerformLayout()
         Me.Guna2GroupBox2.ResumeLayout(False)
         Me.Guna2GroupBox2.PerformLayout()
+        Me.Guna2GroupBox3.ResumeLayout(False)
+        Me.Guna2GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -321,4 +466,12 @@ Partial Class policies_add
     Friend WithEvents Label2 As Label
     Friend WithEvents Guna2Separator2 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2GroupBox3 As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents Guna2Separator3 As Guna.UI2.WinForms.Guna2Separator
+    Friend WithEvents Guna2ImageButton2 As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2Button4 As Guna.UI2.WinForms.Guna2Button
 End Class

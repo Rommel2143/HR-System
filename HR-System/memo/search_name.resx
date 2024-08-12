@@ -117,29 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAAOwAAADsAXkocb0AAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAAD6klEQVRYR7VXWWgTURRNVaxN0oiIC/ipfopf4vqj3y6IKEpFwQ8V/VRxQUSoW0EEqaJIbdXaxVTb
-        JChujaV1KaJSRdHS1traaEu1saahNelMjvfOvLTJzEuT1HjgwGTeeffe9+67b24s6cB2D7NtNdhic+GM
-        3YUKew0eaaRn7Z0bm21uzBLyzCHXg3Xk5AlRJSIJVQrKm+vGWjF9/Mh1YRkZfG5wkDrdeJpbjaXCXBoA
-        ssj5QTKSyoqTMcLpYZvCehI4kUOTKg1GMsEKSx2mCC8JQFHStpVLJmeKVWPuBAmOGSbEccFjYO9rBflN
-        Q9jfGMTahwFMLR+AvSYi1ctIqT0i3MWDTu1yEkSME5iLvIC3R4UMfYMK9nl/IKfoJ2lTCkR1eLBEuB0F
-        DTwzCDVuaASCw8IbIRBS8b43hI7fMS8Jd1uDsBZ2wVatmmxI2CDc6hB1bhLyyqPOe+hhq6cHjtL+kS1f
-        SCm50zW6M0Vv+zGp8JvJjoyUijXCvbZ6vmRMIm+vbpidz738BdbKPyYNs7BN10WIS651IqcsKNUZ+Fhz
-        ztcr/TDVOx+4KPLc35Fd/CtuPJbTPEBbUNeWvONd8El1Bqr2asy08P0tGcTeJt3gAOU8u6AlaW7zP+n6
-        zt9hZJ1ukWpMrMEmC308CmSDJ4TBD71/kFXQZho3ctsrXT+sRpB1sjmlw0gftlOcf6dxgHn4vW6woz+1
-        Fe0ROxYMq7BQACmWZCUH8MDwUuP6F7pBxvxL7bBWDJk0sazy6dpG3yAmnG2XaoykSrifMIDpdLD6QrpR
-        58cAJp7vMmmiXFEHKFwChH21vZh85YdUZ2Q0AGkKmIdEGhjnXvphvdRtunbZ+bdB3bsvMAzHuc+w3Vbi
-        NGOw0iK6G9kgHG7gfrdmW0MLbcmxp37k1Qaw+/kQbrWHR1bOaPWHMOdiB6zOsNSehCcTlmGUnIrrHfol
-        kwi88lZ/WHtu/hnC0ps+2MoHpfbi6MZGLsNZ9CNp47GyHihtV/B1QNFKjU/7C98QDtT7Mf16H+bdU9AS
-        0GLQUEwX0uQLdC0n/lIqdidmaLch93ASQdpc1SC8C4wZBDWzmnMGN5AmwThIpxo3OoV3gURBUK+4WrjX
-        QS/rYgXjJR/cUkMQ2z3dyL7qj9XVC7ej4O6VBjLRhJqC2HGXAigaCUB1uLBYuI0HncqjsYb+hRzEzjfA
-        LipXawl/SfUUUJoOCXcScFPqQlmsoQzTmbw9p9b5P3XGZcnb8igoStqqjP0xoZI7nnzlEnD3SgYaDAbT
-        YX3CA5cOaDfWkLFaYio7ovAlY6rzTIB7OG6juJMR5+ShRnoW7zaOXK8pwWL5C+f/J1h4AegiAAAAAElF
-        TkSuQmCC
-</value>
-  </data>
+  <metadata name="Guna2ShadowForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

@@ -71,7 +71,11 @@ Public Class Login
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        login()
 
+    End Sub
+
+    Private Sub login()
         Try
             Dim idwithA As String = "A" & txtbarcode.Text & "A"
             Dim idwithoutA As String = txtbarcode.Text.TrimStart("A"c).TrimEnd("A"c)
@@ -110,7 +114,15 @@ Public Class Login
             txtbarcode.Clear()
 
         End Try
+    End Sub
+
+    Private Sub password_TextChanged(sender As Object, e As EventArgs) Handles password.TextChanged
 
     End Sub
 
+    Private Sub password_KeyDown(sender As Object, e As KeyEventArgs) Handles password.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            login()
+        End If
+    End Sub
 End Class

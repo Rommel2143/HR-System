@@ -6,14 +6,14 @@
         If txt_search.Text = "" Then
             reloadgrid()
         Else
-            reload("SELECT `id`, `memo`, `class` FROM `hr_memo_policies`
+            reload("SELECT `id`, `policy`, `class` FROM `hr_memo_policies`
                  WHERE memo  REGEXP '" & txt_search.Text & "' ", datagrid1)
         End If
 
     End Sub
 
     Private Sub reloadgrid()
-        reload("SELECT `id`, `memo`, `class` FROM `hr_memo_policies`", datagrid1)
+        reload("SELECT `id`, `policy`, `class` FROM `hr_memo_policies` ORDER BY class", datagrid1)
 
     End Sub
 
