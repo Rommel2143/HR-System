@@ -26,9 +26,8 @@ Module Module1
     Public shift1 As String
 
     Public violation_idno As String
-    Public violation_id As Integer
-    Public violation_class As Integer
-
+    Public violation_memoid As Integer
+    Public violation_date As String
     Function GetMacAddress() As String
         Dim macAddress As String = ""
 

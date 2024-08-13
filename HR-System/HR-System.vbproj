@@ -174,6 +174,18 @@
     <Compile Include="memo\HR_Dataset.vb">
       <DependentUpon>HR_Dataset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="memo\memo_analytics.Designer.vb">
+      <DependentUpon>memo_analytics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="memo\memo_analytics.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memo\memo_approval.Designer.vb">
+      <DependentUpon>memo_approval.vb</DependentUpon>
+    </Compile>
+    <Compile Include="memo\memo_approval.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="memo\memo_create.Designer.vb">
       <DependentUpon>memo_create.vb</DependentUpon>
     </Compile>
@@ -186,6 +198,11 @@
     <Compile Include="memo\memo_view.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="memo\offenses_dataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>offenses_dataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="memo\print_memo.Designer.vb">
       <DependentUpon>print_memo.vb</DependentUpon>
     </Compile>
@@ -197,12 +214,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>print_memo_rpt.rpt</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="memo\reprint_memo.Designer.vb">
-      <DependentUpon>reprint_memo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="memo\reprint_memo.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="memo\search_name.Designer.vb">
       <DependentUpon>search_name.vb</DependentUpon>
@@ -261,6 +272,12 @@
     <EmbeddedResource Include="manage\policies_add.resx">
       <DependentUpon>policies_add.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="memo\memo_analytics.resx">
+      <DependentUpon>memo_analytics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memo\memo_approval.resx">
+      <DependentUpon>memo_approval.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="memo\memo_create.resx">
       <DependentUpon>memo_create.vb</DependentUpon>
     </EmbeddedResource>
@@ -273,9 +290,6 @@
     <EmbeddedResource Include="memo\print_memo_rpt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>print_memo_rpt.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="memo\reprint_memo.resx">
-      <DependentUpon>reprint_memo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="memo\search_name.resx">
       <DependentUpon>search_name.vb</DependentUpon>
@@ -307,6 +321,17 @@
     </None>
     <None Include="memo\HR_Dataset.xss">
       <DependentUpon>HR_Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="memo\offenses_dataset.xsc">
+      <DependentUpon>offenses_dataset.xsd</DependentUpon>
+    </None>
+    <None Include="memo\offenses_dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>offenses_dataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="memo\offenses_dataset.xss">
+      <DependentUpon>offenses_dataset.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

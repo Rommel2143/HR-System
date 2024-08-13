@@ -7,6 +7,7 @@ Public Class sub_FRAME
 
 
     Private Sub display_formsub(form As Form)
+
         With form
             .Refresh()
             .TopLevel = False
@@ -60,5 +61,13 @@ Public Class sub_FRAME
 
     Private Sub ViewRecordsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewRecordsToolStripMenuItem.Click
         display_formsub(memo_view)
+    End Sub
+
+    Private Sub ReviewAndApprovalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReviewAndApprovalToolStripMenuItem.Click
+        display_formsub(memo_approval)
+    End Sub
+
+    Private Sub AnalyticsToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AnalyticsToolStripMenuItem1.Click
+        display_formsub(memo_analytics)
     End Sub
 End Class

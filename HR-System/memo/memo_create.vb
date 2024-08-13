@@ -26,15 +26,15 @@ Public Class memo_create
 
         dr = selectcmd.ExecuteReader
         If dr.Read = True Then
-            violation_id = dr.GetInt32("id")
-            violation_class = dr.GetInt32("class")
+            violation_memoid = dr.GetInt32("id")
 
-            lbl_class.Text = violation_class
+
+            lbl_class.Text = dr.GetInt32("class")
 
 
             con.Close()
             con.Open()
-            Dim selectcount As New MySqlCommand("SELECT count(id) FROM `hr_memo_records` WHERE IDno = '" & txt_idno.Text & "' and memoid = '" & violation_id & "' ", con)
+            Dim selectcount As New MySqlCommand("SELECT count(id) FROM `hr_memo_records` WHERE IDno = '" & txt_idno.Text & "' and memoid = '" & violation_memoid & "' ", con)
 
             dr = selectcount.ExecuteReader
             If dr.Read = True Then
@@ -53,6 +53,7 @@ Public Class memo_create
                 lbl_error.Visible = True
             Else
                 violation_idno = txt_idno.Text
+                violation_date = dtpicker.Value.ToString("yyy-MM-dd")
                 con.Close()
                 con.Open()
                 Dim insert As New MySqlCommand("INSERT INTO `hr_memo_records`(`IDno`,
@@ -70,7 +71,7 @@ Public Class memo_create
 
                 With insert.Parameters
                     .AddWithValue("@idno", txt_idno.Text)
-                    .AddWithValue("@memoid", violation_id)
+                    .AddWithValue("@memoid", violation_memoid)
                     .AddWithValue("@dateoffense", dtpicker.Value.ToString("yyy-MM-dd"))
                     .AddWithValue("@datein", datedb)
                     .AddWithValue("@userin", idno)
@@ -84,6 +85,7 @@ Public Class memo_create
                 result = MessageBox.Show("Do you want to print a report?", "Confirmation", MessageBoxButtons.YesNo)
 
                 If result = DialogResult.Yes Then
+                    print_memo.Close()
                     With print_memo
                         .Refresh()
                         .TopLevel = False

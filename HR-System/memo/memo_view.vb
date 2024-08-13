@@ -1,4 +1,5 @@
-﻿Public Class memo_view
+﻿Imports MySql.Data.MySqlClient
+Public Class memo_view
     Dim idnumber As String
     Dim fullname As String
     Dim section As String
@@ -14,14 +15,20 @@
         If txt_search.Text = "" Then
             reloadgrid()
         Else
-            reload("SELECT `IDno`, CONCAT(lastname, ', ', firstname, ' ', middlename) AS Fullname,`section`, `position` FROM `hr_employee_profile`
-                 WHERE IDno REGEXP '" & txt_search.Text & "' or firstname  REGEXP '" & txt_search.Text & "' or lastname  REGEXP '" & txt_search.Text & "' ", datagrid1)
+            reload("SELECT ep.IDno, CONCAT(ep.lastname, ', ', ep.firstname, ' ', ep.middlename) AS Fullname,ep.section, ep.position, COUNT(mr.id) AS Total_Violation FROM  hr_memo_records mr
+                    JOIN hr_employee_profile ep ON mr.IDno = ep.IDno
+                    WHERE  ep.IDno REGEXP '" & txt_search.Text & "' or ep.firstname  REGEXP '" & txt_search.Text & "' or ep.lastname  REGEXP '" & txt_search.Text & "'
+                    GROUP BY mr.IDno
+                    ORDER BY COUNT(mr.id) DESC", datagrid1)
         End If
         datagrid_status = 0
     End Sub
 
     Private Sub reloadgrid()
-        reload("SELECT `IDno`,CONCAT(lastname, ', ', firstname, ' ', middlename) AS Fullname,`section`, `position` FROM `hr_employee_profile`", datagrid1)
+        reload("SELECT ep.IDno, CONCAT(ep.lastname, ', ', ep.firstname, ' ', ep.middlename) AS Fullname,ep.section, ep.position, COUNT(mr.id) AS Total_Violation FROM  hr_memo_records mr
+                    JOIN hr_employee_profile ep ON mr.IDno = ep.IDno
+                     GROUP BY mr.IDno
+                     ORDER BY COUNT(mr.id) DESC", datagrid1)
     End Sub
 
     Private Sub datagrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datagrid1.CellContentClick
@@ -40,6 +47,8 @@
                        mr.userin, 
                        CASE WHEN mr.status = '0' THEN 'Pending' 
                             WHEN mr.status = '1' THEN 'Approved' 
+                            WHEN mr.status = '2' THEN 'Declined' 
+                            
                        END AS status 
                 FROM hr_memo_records mr
                 JOIN hr_memo_policies mp ON mp.id = mr.memoid
@@ -48,23 +57,36 @@
                 End If
 
             Case 1
-                violation_id =
-                violation_idno = idnumber
 
-                With print_memo
-                    .Refresh()
-                    .TopLevel = False
-                    sub_FRAME.Panel1.Controls.Add(print_memo)
-                    .BringToFront()
-                    .Show()
+                If e.RowIndex >= 0 Then
+                    violation_idno = idnumber
+                    Dim violation_id As Integer = datagrid1.Rows(e.RowIndex).Cells(0).Value.ToString()
+                    con.Close()
+                    con.Open()
+                    Dim selectcount As New MySqlCommand("SELECT `id`,`memoid`, `dateoffense`  FROM `hr_memo_records` WHERE id = '" & violation_id & "'", con)
 
-                End With
+                    dr = selectcount.ExecuteReader
+                    If dr.Read = True Then
+                        violation_date = dr.GetDateTime("dateoffense").ToString("yyyy-MM-dd")
+                        violation_memoid = dr.GetInt32("memoid")
+                    End If
+
+                    print_memo.Close()
+                    With print_memo
+                        .Refresh()
+                        .TopLevel = False
+                        sub_FRAME.Panel1.Controls.Add(print_memo)
+                        .BringToFront()
+                        .Show()
+
+                    End With
+                End If
 
         End Select
 
     End Sub
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
         With memo_create
             .txt_idno.Text = idnumber
             .lbl_fullname.Text = fullname
@@ -76,5 +98,11 @@
 
     Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
 
+    End Sub
+
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+        reloadgrid()
+        datagrid_status = 0
+        txt_search.Clear()
     End Sub
 End Class

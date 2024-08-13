@@ -35,9 +35,9 @@ Partial Class sub_FRAME
         Me.DeviceInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.QRCheckerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmployeeProfileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AnalyticsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.AnalyticsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -54,7 +54,7 @@ Partial Class sub_FRAME
         '
         'MasterlistToolStripMenuItem
         '
-        Me.MasterlistToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreateReportToolStripMenuItem, Me.ReviewAndApprovalToolStripMenuItem, Me.ViewRecordsToolStripMenuItem})
+        Me.MasterlistToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreateReportToolStripMenuItem, Me.ReviewAndApprovalToolStripMenuItem, Me.ViewRecordsToolStripMenuItem, Me.AnalyticsToolStripMenuItem1})
         Me.MasterlistToolStripMenuItem.Image = CType(resources.GetObject("MasterlistToolStripMenuItem.Image"), System.Drawing.Image)
         Me.MasterlistToolStripMenuItem.Name = "MasterlistToolStripMenuItem"
         Me.MasterlistToolStripMenuItem.Size = New System.Drawing.Size(85, 37)
@@ -128,7 +128,7 @@ Partial Class sub_FRAME
         '
         'QRCheckerToolStripMenuItem
         '
-        Me.QRCheckerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeeProfileToolStripMenuItem, Me.AnalyticsToolStripMenuItem})
+        Me.QRCheckerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeeProfileToolStripMenuItem})
         Me.QRCheckerToolStripMenuItem.Image = CType(resources.GetObject("QRCheckerToolStripMenuItem.Image"), System.Drawing.Image)
         Me.QRCheckerToolStripMenuItem.Name = "QRCheckerToolStripMenuItem"
         Me.QRCheckerToolStripMenuItem.Size = New System.Drawing.Size(115, 37)
@@ -139,12 +139,6 @@ Partial Class sub_FRAME
         Me.EmployeeProfileToolStripMenuItem.Name = "EmployeeProfileToolStripMenuItem"
         Me.EmployeeProfileToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
         Me.EmployeeProfileToolStripMenuItem.Text = "Employee Profile"
-        '
-        'AnalyticsToolStripMenuItem
-        '
-        Me.AnalyticsToolStripMenuItem.Name = "AnalyticsToolStripMenuItem"
-        Me.AnalyticsToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
-        Me.AnalyticsToolStripMenuItem.Text = "Analytics"
         '
         'ManageToolStripMenuItem
         '
@@ -160,6 +154,12 @@ Partial Class sub_FRAME
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1208, 636)
         Me.Panel1.TabIndex = 12
+        '
+        'AnalyticsToolStripMenuItem1
+        '
+        Me.AnalyticsToolStripMenuItem1.Name = "AnalyticsToolStripMenuItem1"
+        Me.AnalyticsToolStripMenuItem1.Size = New System.Drawing.Size(234, 22)
+        Me.AnalyticsToolStripMenuItem1.Text = "Analytics"
         '
         'sub_FRAME
         '
@@ -192,5 +192,5 @@ Partial Class sub_FRAME
     Friend WithEvents ReviewAndApprovalToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewRecordsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EmployeeProfileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AnalyticsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AnalyticsToolStripMenuItem1 As ToolStripMenuItem
 End Class

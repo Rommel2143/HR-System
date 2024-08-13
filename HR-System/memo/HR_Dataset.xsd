@@ -12,7 +12,7 @@
   <xs:element name="HR_Dataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="HR_Dataset" msprop:Generator_UserDSName="HR_Dataset">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="memo" msprop:Generator_TableClassName="memoDataTable" msprop:Generator_TableVarName="tablememo" msprop:Generator_RowChangedName="memoRowChanged" msprop:Generator_TablePropName="memo" msprop:Generator_RowDeletingName="memoRowDeleting" msprop:Generator_RowChangingName="memoRowChanging" msprop:Generator_RowEvHandlerName="memoRowChangeEventHandler" msprop:Generator_RowDeletedName="memoRowDeleted" msprop:Generator_RowClassName="memoRow" msprop:Generator_UserTableName="memo" msprop:Generator_RowEvArgName="memoRowChangeEvent">
+        <xs:element name="memo" msprop:Generator_TableClassName="memoDataTable" msprop:Generator_TableVarName="tablememo" msprop:Generator_TablePropName="memo" msprop:Generator_RowDeletingName="memoRowDeleting" msprop:Generator_RowChangingName="memoRowChanging" msprop:Generator_RowEvHandlerName="memoRowChangeEventHandler" msprop:Generator_RowDeletedName="memoRowDeleted" msprop:Generator_UserTableName="memo" msprop:Generator_RowChangedName="memoRowChanged" msprop:Generator_RowEvArgName="memoRowChangeEvent" msprop:Generator_RowClassName="memoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -31,7 +31,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="signatories" msprop:Generator_TableClassName="signatoriesDataTable" msprop:Generator_TableVarName="tablesignatories" msprop:Generator_RowChangedName="signatoriesRowChanged" msprop:Generator_TablePropName="signatories" msprop:Generator_RowDeletingName="signatoriesRowDeleting" msprop:Generator_RowChangingName="signatoriesRowChanging" msprop:Generator_RowEvHandlerName="signatoriesRowChangeEventHandler" msprop:Generator_RowDeletedName="signatoriesRowDeleted" msprop:Generator_RowClassName="signatoriesRow" msprop:Generator_UserTableName="signatories" msprop:Generator_RowEvArgName="signatoriesRowChangeEvent">
+        <xs:element name="signatories" msprop:Generator_TableClassName="signatoriesDataTable" msprop:Generator_TableVarName="tablesignatories" msprop:Generator_TablePropName="signatories" msprop:Generator_RowDeletingName="signatoriesRowDeleting" msprop:Generator_RowChangingName="signatoriesRowChanging" msprop:Generator_RowEvHandlerName="signatoriesRowChangeEventHandler" msprop:Generator_RowDeletedName="signatoriesRowDeleted" msprop:Generator_UserTableName="signatories" msprop:Generator_RowChangedName="signatoriesRowChanged" msprop:Generator_RowEvArgName="signatoriesRowChangeEvent" msprop:Generator_RowClassName="signatoriesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="checked" msprop:Generator_ColumnVarNameInTable="columnchecked" msprop:Generator_ColumnPropNameInRow="checked" msprop:Generator_ColumnPropNameInTable="checkedColumn" msprop:Generator_UserColumnName="checked" type="xs:string" minOccurs="0" />
@@ -40,24 +40,10 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="offenses" msprop:Generator_TableClassName="offensesDataTable" msprop:Generator_TableVarName="tableoffenses" msprop:Generator_RowChangedName="offensesRowChanged" msprop:Generator_TablePropName="offenses" msprop:Generator_RowDeletingName="offensesRowDeleting" msprop:Generator_RowChangingName="offensesRowChanging" msprop:Generator_RowEvHandlerName="offensesRowChangeEventHandler" msprop:Generator_RowDeletedName="offensesRowDeleted" msprop:Generator_RowClassName="offensesRow" msprop:Generator_UserTableName="offenses" msprop:Generator_RowEvArgName="offensesRowChangeEvent">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="dateoffense" msprop:Generator_ColumnVarNameInTable="columndateoffense" msprop:Generator_ColumnPropNameInRow="dateoffense" msprop:Generator_ColumnPropNameInTable="dateoffenseColumn" msprop:Generator_UserColumnName="dateoffense" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" type="xs:string" minOccurs="0" />
-              <xs:element name="memoid" msprop:Generator_ColumnVarNameInTable="columnmemoid" msprop:Generator_ColumnPropNameInRow="memoid" msprop:Generator_ColumnPropNameInTable="memoidColumn" msprop:Generator_UserColumnName="memoid" type="xs:string" minOccurs="0" />
-              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:memo" />
-      <xs:field xpath="mstns:id" />
-    </xs:unique>
-    <xs:unique name="offenses_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:offenses" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
   </xs:element>

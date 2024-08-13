@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="offenses_dataset" targetNamespace="http://tempuri.org/offenses_dataset.xsd" xmlns:mstns="http://tempuri.org/offenses_dataset.xsd" xmlns="http://tempuri.org/offenses_dataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="offenses_dataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="offenses_dataset" msprop:Generator_UserDSName="offenses_dataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="offenses" msprop:Generator_TableClassName="offensesDataTable" msprop:Generator_TableVarName="tableoffenses" msprop:Generator_TablePropName="offenses" msprop:Generator_RowDeletingName="offensesRowDeleting" msprop:Generator_RowChangingName="offensesRowChanging" msprop:Generator_RowEvHandlerName="offensesRowChangeEventHandler" msprop:Generator_RowDeletedName="offensesRowDeleted" msprop:Generator_UserTableName="offenses" msprop:Generator_RowChangedName="offensesRowChanged" msprop:Generator_RowEvArgName="offensesRowChangeEvent" msprop:Generator_RowClassName="offensesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
+              <xs:element name="IDno" msprop:Generator_ColumnVarNameInTable="columnIDno" msprop:Generator_ColumnPropNameInRow="IDno" msprop:Generator_ColumnPropNameInTable="IDnoColumn" msprop:Generator_UserColumnName="IDno" type="xs:string" minOccurs="0" />
+              <xs:element name="memoid" msprop:Generator_ColumnVarNameInTable="columnmemoid" msprop:Generator_ColumnPropNameInRow="memoid" msprop:Generator_ColumnPropNameInTable="memoidColumn" msprop:Generator_UserColumnName="memoid" type="xs:string" minOccurs="0" />
+              <xs:element name="dateoffense" msprop:Generator_ColumnVarNameInTable="columndateoffense" msprop:Generator_ColumnPropNameInRow="dateoffense" msprop:Generator_ColumnPropNameInTable="dateoffenseColumn" msprop:Generator_UserColumnName="dateoffense" type="xs:string" minOccurs="0" />
+              <xs:element name="datein" msprop:Generator_ColumnVarNameInTable="columndatein" msprop:Generator_ColumnPropNameInRow="datein" msprop:Generator_ColumnPropNameInTable="dateinColumn" msprop:Generator_UserColumnName="datein" type="xs:string" minOccurs="0" />
+              <xs:element name="userin" msprop:Generator_ColumnVarNameInTable="columnuserin" msprop:Generator_ColumnPropNameInRow="userin" msprop:Generator_ColumnPropNameInTable="userinColumn" msprop:Generator_UserColumnName="userin" type="xs:string" minOccurs="0" />
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
