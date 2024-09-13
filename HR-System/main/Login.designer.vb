@@ -85,7 +85,7 @@ Partial Class Login
         Me.Guna2ImageButton1.ImageOffset = New System.Drawing.Point(0, 0)
         Me.Guna2ImageButton1.ImageRotate = 0!
         Me.Guna2ImageButton1.ImageSize = New System.Drawing.Size(30, 30)
-        Me.Guna2ImageButton1.Location = New System.Drawing.Point(521, 265)
+        Me.Guna2ImageButton1.Location = New System.Drawing.Point(521, 271)
         Me.Guna2ImageButton1.Name = "Guna2ImageButton1"
         Me.Guna2ImageButton1.PressedState.Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
         Me.Guna2ImageButton1.PressedState.ImageSize = New System.Drawing.Size(30, 30)
