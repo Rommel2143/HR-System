@@ -7,7 +7,7 @@ Public Class memo_analytics
     End Sub
 
     Private Sub reload_all()
-        reloadgrid()
+        'reloadgrid()
         reloadgrid2()
 
         Try
@@ -63,13 +63,13 @@ ORDER BY COUNT(mr.ID) DESC"
     '    End If
     'End Sub
 
-    Private Sub reloadgrid()
-        reload("SELECT CONCAT(ep.lastname, ', ', ep.firstname, ' ', ep.middlename) AS Fullname, COUNT(mr.id) AS Total_Violation FROM  hr_memo_records mr
-                    JOIN hr_employee_profile ep ON mr.IDno = ep.IDno
-                    WHERE mr.status = '1'
-                     GROUP BY mr.IDno
-                     ORDER BY COUNT(mr.id) DESC", datagrid1)
-    End Sub
+    'Private Sub reloadgrid()
+    '    reload("SELECT CONCAT(ep.lastname, ', ', ep.firstname, ' ', ep.middlename) AS Fullname, COUNT(mr.id) AS Total_Violation FROM  hr_memo_records mr
+    '                JOIN hr_employee_profile ep ON mr.IDno = ep.IDno
+    '                WHERE mr.status = '1'
+    '                 GROUP BY mr.IDno
+    '                 ORDER BY COUNT(mr.id) DESC", datagrid1)
+    'End Sub
 
     Private Sub reloadgrid2()
         reload("SELECT mp.policy AS Policy,mp.class AS Class, COUNT(mr.id) AS Total_Violation FROM  hr_memo_records mr
